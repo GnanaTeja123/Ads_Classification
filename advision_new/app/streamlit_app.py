@@ -1,6 +1,7 @@
 # Disable TensorFlow for HuggingFace (to prevent DLL errors)
 import os
 os.environ["USE_TF"] = "0"
+streamlit run app.py --server.port $PORT --server.address 0.0.0.0
 
 import streamlit as st
 import joblib
@@ -87,3 +88,4 @@ if st.button("🔍 Analyze Ad"):
 
     else:
         st.warning("⚠️ Please enter some ad text before analyzing.")
+
